@@ -20,6 +20,7 @@ import {
   DropdownMenuSeparator
 } from '@/components/ui/dropdown-menu';
 import { Label } from '@/components/ui/label';
+import { Input } from './ui/input';
 
 export function Home() {
   const { account } = useWallet();
@@ -71,8 +72,11 @@ export function Home() {
                     <Label className="text-sm">Here you can view and manage your medical records.</Label>
                   </DialogDescription>
                 </DialogHeader>
-                <div className="p-4">
-                  <p>Record details go here...</p>
+                <div>
+                  <p>RecordID: </p>
+                  <p>Patient Address: </p>
+                  <p>Provider Address: </p>
+                  <p>Prescription: </p>
                 </div>
                 <DialogFooter>
                   <DialogClose asChild>
@@ -111,17 +115,34 @@ export function Home() {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>
-                    <Label className="text-lg font-semibold">Edit Profile</Label>
-                  </DialogTitle>
-                  <DialogDescription>
-                    <Label className="text-sm">Update your personal details and preferences here.</Label>
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="p-4">
-                  <p>Profile edit form goes here...</p>
+                <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
+            </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="name" className="text-right">
+                    Name
+                  </Label>
+                  <Input
+                    id="name"
+                    defaultValue="Pedro Duarte"
+                    className="col-span-3"
+                  />
                 </div>
-                <DialogFooter>
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    Username
+                  </Label>
+                  <Input
+                    id="username"
+                    defaultValue="@peduarte"
+                    className="col-span-3"
+                  />
+                </div>
+              </div>
+            <DialogFooter>
                   <DialogClose asChild>
                     <Button variant="outline">Close</Button>
                   </DialogClose>

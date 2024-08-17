@@ -23,12 +23,8 @@ function App() {
     <Router>
       <Header />
       
-      <div className="bg-gradient-to-r from-violet-600 to-black text-black shadow-md py-2">
-        {/* Menubar content here */}
-      </div>
-
-      {/* Main container with background */}
-      <div className="min-h-screen bg-gradient-to-r from-violet-600 to-black flex flex-col">
+      <div className="bg-gradient-to-r from-white-600 to-black text-black shadow-md py-2"></div>
+      <div className="min-h-screen bg-gradient-to-r from-white-600 to-black flex flex-col">
         <div className="flex items-center justify-center flex-col mt-12">
           {connected ? (
             <Routes>
