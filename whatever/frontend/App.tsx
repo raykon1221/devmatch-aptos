@@ -14,6 +14,7 @@ import { Home } from "./components/Home";
 import { Records } from "./components/Records";
 import { Profile } from "./components/Profile";
 import { CardWithForm } from "./components/Card";
+import { TableDemo } from "@/components/Location";
 
 function App() {
   const { connected } = useWallet();
@@ -51,6 +52,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/records" element={<Records />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/" element={<CardWithForm />} />
+            <Route path="/location" element={<TableDemo />} />
           </Routes>
         ) : (
           <CardWithForm/>
