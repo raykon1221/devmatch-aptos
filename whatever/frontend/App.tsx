@@ -23,26 +23,27 @@ function App() {
       <Header />
       
       {/* Menubar Component */}
-      <Menubar>
-        <MenubarMenu>
-          <MenubarTrigger>File</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>New</MenubarItem>
-            <MenubarItem>Open</MenubarItem>
-            <MenubarItem>Save</MenubarItem>
-            <MenubarItem>Exit</MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger>Edit</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>Undo</MenubarItem>
-            <MenubarItem>Redo</MenubarItem>
-          </MenubarContent>
-        </MenubarMenu>
-        {/* Add more MenubarMenu as needed */}
-      </Menubar>
-
+      <div className="bg-gradient-to-r from-purple-800 to-black text-black shadow-md py-4">
+        <Menubar>
+          <MenubarMenu>
+            <MenubarTrigger>File</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>New</MenubarItem>
+              <MenubarItem>Open</MenubarItem>
+              <MenubarItem>Save</MenubarItem>
+              <MenubarItem>Exit</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>Edit</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>Undo</MenubarItem>
+              <MenubarItem>Redo</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          {/* Add more MenubarMenu as needed */}
+        </Menubar>
+      </div>
       <div className="flex items-center justify-center flex-col">
         {connected ? (
           <Routes>
