@@ -2,7 +2,7 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Internal Components
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { WalletDetails } from "@/components/WalletDetails";
 import { NetworkInfo } from "@/components/NetworkInfo";
@@ -13,6 +13,7 @@ import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem } fro
 import { Home } from "./components/Home";
 import { Records } from "./components/Records";
 import { Profile } from "./components/Profile";
+import { CardWithForm } from "./components/Card";
 
 function App() {
   const { connected } = useWallet();
@@ -51,13 +52,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         ) : (
-          <Card className="bg-gray-800 shadow-lg">
-            <CardContent className="flex flex-col gap-10 pt-6">
-              <CardHeader>
-                <CardTitle>To get started Connect a wallet</CardTitle>
-              </CardHeader>
-            </CardContent>
-          </Card>
+          <CardWithForm/>
         )}
       </div>
     </Router>
