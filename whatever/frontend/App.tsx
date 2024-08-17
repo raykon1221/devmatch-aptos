@@ -48,7 +48,7 @@ function App() {
       <div className="flex items-center justify-center flex-col">
         {connected ? (
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/card" element={<CardWithForm />} />
             <Route path="/home" element={<Home />} />
             <Route path="/records" element={<Records />} />
             <Route path="/profile" element={<Profile />} />

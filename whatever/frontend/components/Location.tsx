@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
     Table,
     TableBody,
@@ -49,34 +50,44 @@ import {
   ]
   
   export function TableDemo() {
+    const handleBookAppointment = (location: string) => {
+        // Handle the booking logic here
+        console.log("Booking appointment for:", location);
+      };
+
     return (
-      <Table>
-        <TableCaption>A list of your search result.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Nearest Location</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Services</TableHead>
-            <TableHead className="text-right">Opening Hours</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {locations.map((location) => (
-            <TableRow key={location.location}>
-              <TableCell className="font-medium">{location.location}</TableCell>
-              <TableCell>{location.paymentStatus}</TableCell>
-              <TableCell>{location.paymentMethod}</TableCell>
-              <TableCell className="text-right">{location.totalAmount}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">Book Appointment</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
-    )
-  }
+        <Table className="min-w-full max-w-[1200px]">
+            <TableCaption>A list of your search results.</TableCaption>
+            <TableHeader>
+                <TableRow>
+                <TableHead className="w-[100px]">Nearest Location</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Services</TableHead>
+                <TableHead>Opening Hours</TableHead>
+                <TableHead className="text-right">Action</TableHead> {/* Changed Header */}
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {locations.map((location) => (
+                <TableRow key={location.location}>
+                    <TableCell className="font-medium">{location.location}</TableCell>
+                    <TableCell>{location.paymentStatus}</TableCell>
+                    <TableCell>{location.paymentMethod}</TableCell>
+                    <TableCell>{location.totalAmount}</TableCell>
+                    <TableCell className="text-right">
+                    <Button onClick={() => handleBookAppointment(location.location)}>Book Appointment</Button>
+                    </TableCell>
+                </TableRow>
+                ))}
+            </TableBody>
+            <TableFooter>
+                <TableRow>
+                <TableCell colSpan={4}>Total</TableCell> {/* Adjusted colspan */}
+                <TableCell className="text-right"> {/* Action column removed from footer */}
+                </TableCell>
+                </TableRow>
+            </TableFooter>
+        </Table>
+  );
+}
   

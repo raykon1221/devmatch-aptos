@@ -63,6 +63,15 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+    
+    .dialog-custom-width {
+      width: 90%; /* Adjust width as needed */
+      max-width: 1200px; /* Adjust max-width as needed */
+    }
+    
+    .table-custom-width {
+      width: 100%;
+    }
   }
 }
 
