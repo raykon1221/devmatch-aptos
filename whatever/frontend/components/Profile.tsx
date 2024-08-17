@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import {
   Dialog,
   DialogTrigger,
@@ -34,8 +36,14 @@ export function Profile() {
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg">
-      <h4 className="text-xl font-semibold text-gray-800 mb-6">Profile</h4>
-      
+      <div className="flex items-center mb-6">
+        <Avatar className="mr-4">
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+
+        <h4 className="text-xl font-semibold text-gray-800">Profile</h4>
+      </div>
       {/* Profile Data */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card shadow="md">
