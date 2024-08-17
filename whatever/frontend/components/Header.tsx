@@ -6,10 +6,13 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-8">
         <h1 className="display">DevMatch</h1>
 
-        <div className="flex gap-2 items-center flex-wrap">
+        <nav className="flex gap-4 items-center flex-wrap">
+          <a href="/home" className="text-white-700 hover:text-white-900">Home</a>
+          <a href="/profile" className="text-white-700 hover:text-white-900">Profile</a>
+          <a href="/records" className="text-white-700 hover:text-white-900">Records</a>
           <WalletSelector />
-        </div>
-      </div>
+        </nav>
+      </div> {/* Missing closing tag added here */}
     </div>
   );
 }
