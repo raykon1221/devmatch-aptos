@@ -32,7 +32,7 @@ export function CardWithForm() {
 
   return (
     <>
-      <Card className="w-[350px]">
+      <Card className="w-[550px]">
         <CardHeader>
           <CardTitle>Searching for nearby clinical services?</CardTitle>
           <CardDescription>We got you! Just with a few clicks.</CardDescription>

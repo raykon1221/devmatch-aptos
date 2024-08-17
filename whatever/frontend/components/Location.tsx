@@ -56,7 +56,7 @@ import {
       };
 
     return (
-        <Table className="min-w-full max-w-[1200px]">
+        <Table className="w-[750px]">
             <TableCaption>A list of your search results.</TableCaption>
             <TableHeader>
                 <TableRow>

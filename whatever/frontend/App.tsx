@@ -23,41 +23,26 @@ function App() {
     <Router>
       <Header />
       
-      {/* Menubar Component */}
-      <div className="bg-gradient-to-r from-purple-800 to-black text-black shadow-md py-4">
-        <Menubar>
-          <MenubarMenu>
-            <MenubarTrigger>File</MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>New</MenubarItem>
-              <MenubarItem>Open</MenubarItem>
-              <MenubarItem>Save</MenubarItem>
-              <MenubarItem>Exit</MenubarItem>
-            </MenubarContent>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger>Edit</MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>Undo</MenubarItem>
-              <MenubarItem>Redo</MenubarItem>
-            </MenubarContent>
-          </MenubarMenu>
-          {/* Add more MenubarMenu as needed */}
-        </Menubar>
+      <div className="bg-gradient-to-r from-violet-600 to-black text-black shadow-md py-2">
+        {/* Menubar content here */}
       </div>
-      <div className="flex items-center justify-center flex-col">
-        {connected ? (
-          <Routes>
-            <Route path="/card" element={<CardWithForm />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/records" element={<Records />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/" element={<CardWithForm />} />
-            <Route path="/location" element={<TableDemo />} />
-          </Routes>
-        ) : (
-          <CardWithForm/>
-        )}
+
+      {/* Main container with background */}
+      <div className="min-h-screen bg-gradient-to-r from-violet-600 to-black flex flex-col">
+        <div className="flex items-center justify-center flex-col mt-12">
+          {connected ? (
+            <Routes>
+              <Route path="/card" element={<CardWithForm />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/records" element={<Records />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/" element={<CardWithForm />} />
+              <Route path="/location" element={<TableDemo />} />
+            </Routes>
+          ) : (
+            <CardWithForm/>
+          )}
+        </div>
       </div>
     </Router>
   );
