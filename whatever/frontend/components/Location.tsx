@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
     Table,
@@ -9,50 +10,60 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardFooter
+} from "@/components/ui/card";
   
   const locations = [
     {
       location: "Taman Bukit Jalil",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "8:00am - 10:00pm",
-      paymentMethod: "Primary Care",
+      name: "Medilove Clinic",
+      time: "8:00am - 10:00pm",
+      service: "Primary Care",
     },
     {
       location: "Sri Petaling",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "6:30am - 10:00pm",
-      paymentMethod: "Primary Care",
+      name: "Medilove Clinic",
+      time: "6:30am - 10:00pm",
+      service: "Primary Care",
+    },
+    {
+      location: "Sri Petaling",
+      name: "Medilove Clinic",
+      time: "6:00am - 10:00pm",
+      service: "Primary Care",
     },
     {
         location: "Sri Petaling",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "6:00am - 10:00pm",
-      paymentMethod: "Primary Care",
+        name: "Medilove Clinic",
+        time: "6:00am - 10:00pm",
+        service: "Primary Care",
     },
     {
-        location: "Sri Petaling",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "6:00am - 10:00pm",
-      paymentMethod: "Primary Care",
+      location: "Sri Petaling",
+      name: "Medilove Clinic",
+      time: "6:00am - 10:00pm",
+      service: "Primary Care",
     },
     {
-        location: "Sri Petaling",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "6:00am - 10:00pm",
-      paymentMethod: "Primary Care",
-    },
-    {
-        location: "Sri Petaling",
-      paymentStatus: "Medilove Clinic",
-      totalAmount: "6:00am - 10:00pm",
-      paymentMethod: "Primary Care",
+      location: "Sri Petaling",
+      name: "Medilove Clinic",
+      time: "6:00am - 10:00pm",
+      service: "Primary Care",
     },
   ]
   
   export function TableDemo() {
-    const handleBookAppointment = (location: string) => {
+    const [selectedLocation, setSelectedLocation] = useState<any>(null);
+    const handleBookAppointment = (location: any) => {
         // Handle the booking logic here
-        console.log("Booking appointment for:", location);
+        setSelectedLocation(location);
       };
 
     return (
@@ -72,9 +83,9 @@ import {
                 {locations.map((location) => (
                 <TableRow key={location.location}>
                     <TableCell className="font-medium">{location.location}</TableCell>
-                    <TableCell>{location.paymentStatus}</TableCell>
-                    <TableCell>{location.paymentMethod}</TableCell>
-                    <TableCell>{location.totalAmount}</TableCell>
+                    <TableCell>{location.name}</TableCell>
+                    <TableCell>{location.service}</TableCell>
+                    <TableCell>{location.time}</TableCell>
                     <TableCell className="text-right">
                     <Button onClick={() => handleBookAppointment(location.location)}>Book Appointment</Button>
                     </TableCell>
@@ -89,6 +100,27 @@ import {
                 </TableRow>
             </TableFooter>
         </Table>
+        {selectedLocation && (
+        <Card className="mt-4">
+          <CardHeader>
+            <CardTitle>Booking Appointment</CardTitle>
+            <CardDescription>
+              You are booking an appointment at {selectedLocation.location}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p><strong>Clinic Name:</strong> {selectedLocation.paymentStatus}</p>
+            <p><strong>Service:</strong> {selectedLocation.paymentMethod}</p>
+            <p><strong>Opening Hours:</strong> {selectedLocation.totalAmount}</p>
+          </CardContent>
+          <CardFooter className="mt-4">
+            <Button variant="outline" onClick={() => setSelectedLocation(null)}>
+              Cancel
+            </Button>
+            <Button>Confirm Appointment</Button>
+          </CardFooter>
+        </Card>
+      )}
       </div>
   );
 }

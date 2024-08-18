@@ -74,8 +74,8 @@ export function Home() {
                 </DialogHeader>
                 <div>
                   <p>RecordID: RDV00184934</p>
-                  <p>Patient Address: 0xK902e0352240477d081806df8baa85a7d85ee9119aaa03423c8760267342</p>
-                  <p>Provider Address: 0x8kys64e0352240477d081806df8baa85a7d85ee9119aaa03423c876025d09862</p>
+                  <p>Patient Address: 0xK902e0352240477d081806df8baa85a7d85ee911dfgd45535</p>
+                  <p>Provider Address: 0x8kys64e0352240477d081806df8baa85a7d85ee9119aaa03</p>
                   <p>Prescription: </p>
                 </div>
                 <DialogFooter>
