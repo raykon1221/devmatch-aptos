@@ -76,7 +76,7 @@ export function Home() {
                   <p>RecordID: RDV00184934</p>
                   <p>Patient Address: 0xK902e0352240477d081806df8baa85a7d85ee911dfgd45535</p>
                   <p>Provider Address: 0x8kys64e0352240477d081806df8baa85a7d85ee9119aaa03</p>
-                  <p>Prescription: </p>
+                  <p>Prescription: RSV - Respiratory Syncytial Virus Vaccine</p>
                 </div>
                 <DialogFooter>
                   <DialogClose asChild>

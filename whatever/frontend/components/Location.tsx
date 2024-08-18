@@ -28,8 +28,8 @@ import {
       service: "Primary Care",
     },
     {
-      location: "Sri Petaling",
-      name: "Medilove Clinic",
+      location: "Sunway",
+      name: "Sunway Medical Centre",
       time: "6:30am - 10:00pm",
       service: "Primary Care",
     },
@@ -48,14 +48,14 @@ import {
     {
       location: "Sri Petaling",
       name: "Medilove Clinic",
-      time: "6:00am - 10:00pm",
+      time: "6:00am - 7:00pm",
       service: "Primary Care",
     },
     {
       location: "Sri Petaling",
       name: "Medilove Clinic",
-      time: "6:00am - 10:00pm",
-      service: "Primary Care",
+      time: "6:00am - 8:00pm",
+      service: "Vaccine Service",
     },
   ]
   
