@@ -9,7 +9,7 @@ export function Header() {
 
         <nav className="flex gap-4 items-center flex-wrap">
           <Button variant="ghost" onClick={() => window.location.href = "/card"}>
-            Portal
+            Search
           </Button>
           <Button variant="ghost" onClick={() => window.location.href = "/home"}>
             Home
