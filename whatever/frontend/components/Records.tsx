@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {
@@ -25,23 +25,17 @@ interface Record {
   id: string;
   title: string;
   details: string;
-  // Add other fields as needed
 }
 
+const staticRecords: Record[] = [
+  { id: 'RDR073742', title: 'Record Title 1', details: 'Medilove Clinic' },
+  { id: 'RDR073743', title: 'Record Title 2', details: 'Medilove Clinic' },
+  { id: 'RDR073744', title: 'Record Title 3', details: 'Medilove Clinic' },
+];
+
 export const Records: React.FC = () => {
-  const [records, setRecords] = useState<Record[]>([]);
+  const [records, setRecords] = useState<Record[]>(staticRecords);
   const [selectedRecord, setSelectedRecord] = useState<Record | null>(null);
-
-  useEffect(() => {
-    async function fetchRecords() {
-      // Replace with your actual data fetching logic
-      const response = await fetch('/api/records');
-      const data: Record[] = await response.json();
-      setRecords(data);
-    }
-
-    fetchRecords();
-  }, []);
 
   const handleEdit = (record: Record) => {
     // Handle edit record logic
@@ -128,6 +122,3 @@ export const Records: React.FC = () => {
     </div>
   );
 };
-
-
-
