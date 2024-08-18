@@ -66,6 +66,7 @@ export function CardWithForm() {
                     <SelectItem value="women">Women's Health Service</SelectItem>
                     <SelectItem value="surgical">Surgical Service</SelectItem>
                     <SelectItem value="urgent">Urgent Care</SelectItem>
+                    <SelectItem value="vaccine">Vaccine Service</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -84,7 +85,7 @@ export function CardWithForm() {
         <DialogTrigger asChild>
           <Button variant="default" className="hidden">Trigger</Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="max-w-3xl w-[full] max-h-[600px] h-auto overflow-auto">
           <DialogHeader>
             <DialogTitle>
               <Label className="text-lg font-semibold">Search Results</Label>

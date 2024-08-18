@@ -13,37 +13,37 @@ import {
   const locations = [
     {
       location: "Taman Bukit Jalil",
-      paymentStatus: "Paid",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "8:00am - 10:00pm",
       paymentMethod: "Primary Care",
     },
     {
       location: "Sri Petaling",
-      paymentStatus: "Pending",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "6:30am - 10:00pm",
       paymentMethod: "Primary Care",
     },
     {
         location: "Sri Petaling",
-      paymentStatus: "Unpaid",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "6:00am - 10:00pm",
       paymentMethod: "Primary Care",
     },
     {
         location: "Sri Petaling",
-      paymentStatus: "Paid",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "6:00am - 10:00pm",
       paymentMethod: "Primary Care",
     },
     {
         location: "Sri Petaling",
-      paymentStatus: "Paid",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "6:00am - 10:00pm",
       paymentMethod: "Primary Care",
     },
     {
         location: "Sri Petaling",
-      paymentStatus: "Pending",
+      paymentStatus: "Medilove Clinic",
       totalAmount: "6:00am - 10:00pm",
       paymentMethod: "Primary Care",
     },
@@ -56,11 +56,12 @@ import {
       };
 
     return (
-        <Table className="w-[750px]">
+      <div className="p-4 bg-white shadow-md rounded-lg max-w-5xl mx-auto">
+        <Table className="w-[600px]">
             <TableCaption>A list of your search results.</TableCaption>
             <TableHeader>
                 <TableRow>
-                <TableHead className="w-[100px]">Nearest Location</TableHead>
+                <TableHead className="w-[200px]">Nearest Location</TableHead>
                 <TableHead>Name</TableHead>
                 <TableHead>Services</TableHead>
                 <TableHead>Opening Hours</TableHead>
@@ -88,6 +89,7 @@ import {
                 </TableRow>
             </TableFooter>
         </Table>
+      </div>
   );
 }
   

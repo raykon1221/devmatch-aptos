@@ -73,9 +73,9 @@ export function Home() {
                   </DialogDescription>
                 </DialogHeader>
                 <div>
-                  <p>RecordID: </p>
-                  <p>Patient Address: </p>
-                  <p>Provider Address: </p>
+                  <p>RecordID: RDV00184934</p>
+                  <p>Patient Address: 0xK902e0352240477d081806df8baa85a7d85ee9119aaa03423c8760267342</p>
+                  <p>Provider Address: 0x8kys64e0352240477d081806df8baa85a7d85ee9119aaa03423c876025d09862</p>
                   <p>Prescription: </p>
                 </div>
                 <DialogFooter>

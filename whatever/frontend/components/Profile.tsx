@@ -27,8 +27,8 @@ import { NetworkInfo } from '@/components/NetworkInfo'; // Importing NetworkInfo
 
 export function Profile() {
   const [profileData] = useState({
-    name: 'Xin Rou',
-    email: 'xinrou@example.com',
+    name: 'Matthew',
+    email: 'mat12345@example.com',
     phone: '123-456-7890',
   });
 
